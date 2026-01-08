@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="520" viewBox="0 0 980 520">
+  <style>
+    .box { fill: white; stroke: #111; stroke-width: 2; rx: 14; ry: 14; }
+    .title { font: 700 18px Arial, sans-serif; }
+    .text { font: 14px Arial, sans-serif; }
+    .small { font: 12px Arial, sans-serif; }
+    .line { stroke: #111; stroke-width: 2; marker-end: url(#arrow); }
+  </style>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="10" refY="3" orient="auto">
+      <path d="M0,0 L10,3 L0,6 Z" fill="#111"/>
+    </marker>
+  </defs>
+
+  <text x="30" y="40" class="title">Enterprise Cybersecurity Home Lab (example topology)</text>
+  <text x="30" y="62" class="small">Edit this diagram to match your actual build. Keep everything isolated (host-only/internal).</text>
+
+  <rect x="40" y="100" width="260" height="130" class="box"/>
+  <text x="60" y="130" class="title">LAN-AD</text>
+  <text x="60" y="155" class="text">DC01 (AD DS + DNS)</text>
+  <text x="60" y="180" class="small">10.10.10.10</text>
+
+  <rect x="40" y="260" width="260" height="180" class="box"/>
+  <text x="60" y="290" class="title">LAN-CLIENTS</text>
+  <text x="60" y="315" class="text">WIN10-01 (Endpoint)</text>
+  <text x="60" y="340" class="small">10.10.20.10</text>
+  <text x="60" y="370" class="text">WIN10-02 (Optional)</text>
+  <text x="60" y="395" class="small">10.10.20.11</text>
+
+  <rect x="350" y="160" width="280" height="160" class="box"/>
+  <text x="370" y="190" class="title">LAN-SEC</text>
+  <text x="370" y="215" class="text">SEC01 (SIEM/Logging)</text>
+  <text x="370" y="240" class="small">10.10.30.10</text>
+  <text x="370" y="270" class="small">Ingest: Windows/Sysmon/Firewall</text>
+
+  <rect x="690" y="260" width="250" height="180" class="box"/>
+  <text x="710" y="290" class="title">ATTACK-NET</text>
+  <text x="710" y="315" class="text">KALI01 (Internal)</text>
+  <text x="710" y="340" class="small">10.10.40.10</text>
+  <text x="710" y="370" class="small">Lab-only tooling</text>
+
+  <line x1="300" y1="165" x2="350" y2="210" class="line"/>
+  <text x="305" y="150" class="small">Auth/DNS</text>
+
+  <line x1="300" y1="325" x2="350" y2="260" class="line"/>
+  <text x="305" y="350" class="small">Logs</text>
+
+  <line x1="690" y1="330" x2="630" y2="250" class="line"/>
+  <text x="640" y="360" class="small">Telemetry</text>
+
+  <rect x="690" y="100" width="250" height="120" class="box"/>
+  <text x="710" y="130" class="title">pfSense (optional)</text>
+  <text x="710" y="155" class="small">Segmentation + egress control</text>
+  <text x="710" y="180" class="small">Quarantine VLAN (optional)</text>
+</svg>

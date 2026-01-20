@@ -79,24 +79,6 @@ These are **lab-only** exercises. Each scenario includes:
 
 ---
 
-## Evidence (make it “recruiter proof”)
-Add 6–12 screenshots under `docs/screenshots/`:
-- topology view (networks + VMs)
-- AD Users/Computers and a joined endpoint
-- SIEM/agent showing new host logs
-- one detection firing + your triage notes
-- hardening change (GPO/baseline) + re-test
-
----
-
-## Roadmap
-- [ ] Optional pfSense segmentation + allow-list egress
-- [ ] Add Zeek for network telemetry
-- [ ] Add ATT&CK-mapped “atomic” validation tests
-- [ ] Add automated provisioning (Vagrant/Ansible)
-
----
-
 ## License
 MIT — see [LICENSE](LICENSE)
 
